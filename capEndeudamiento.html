@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        :root{
+            --color: ;
+            --font-family: ;
+            --font-size: ;
+        }
+        body{
+            margin: 0%;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            align-items: center;
+            border: solid 1px;
+        }
+        .container_form{
+            background-color: #c2c2c2;
+            display: grid;
+        }
+        .container_form input{            
+            width: 30%;
+            border-radius: 15px;
+            padding: 3px 3px;
+            margin: 7px;
+        }
+    </style>
+    <title>Capacidad de Endeudamiento</title>
+</head>
+<body>
+    <header>
+        <h1 class="first_title">FINANZAS PERSONALES</h1>
+    </header>
+    <section>
+        <div class="container">
+            <h1>CALCULA TU CAPACIDAD DE ENDEUDAMIENTO</h1>
+
+            <form action="" class="mb-3">
+                <label for="InputName">Ingresa tu nombre</label>
+                <input type="text" id="InputName"   placeholder="Tu nombre..." />
+                <label for="InputSalary">Ingresa el valor neto de tus ingresos (Después de descuentos)</label>
+                <input type="number" id="InputSalary" placeholder="Tus ingresos..." />
+                <label for="InputFixedCosts">Ingresa el valor de tus deudas totales</label>
+                <input type="number" id="InputFixedCosts" placeholder="Tus deudas..." />
+                <button type="button" onclick="calculateBorrowingCapacity()" class="btn btn-primary">Consultar</button>
+
+                <p id="ResultName"></p>
+                <p id="ResultSalary"></p>
+                <p id="ResultFixedCosts"></p>
+                <p id="ResultBorrowingCapacity"></p>
+                <p id="ResultSalaryPercent"></p>
+                <p id="ResultFixedCostPercent"></p>
+            </form>
+        </div>
+    </section>
+
+    <script src="./capEndeudamiento.js"></script>
+</body>
+</html>
